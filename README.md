@@ -24,16 +24,3 @@ This system deliberately avoids tight coupling and single-file procedural layout
 * **Factory Design Pattern:** Standardized object creation handled through a creational `UserFactory` layer to eliminate hardcoded instances across the codebase.
 
 
-## Project Structure
-
-The project strictly follows the industry golden standard of **One Class, One File**:
-
-RBAC-System/
-├── Permission.java           # Type-safe enum defining system operations
-├── Role.java                 # Enum mapping roles directly to specific permissions
-├── User.java                 # Abstract blueprint enforcing base identity attributes
-├── AdminUser.java            # Concrete child implementation for root administrators
-├── ManagerUser.java          # Concrete child implementation for mid-tier staff
-├── UserFactory.java          # Factory Pattern class handling standard user creation
-├── AccessControlEngine.java  # Central core engine evaluating and logging permissions
-└── Main.java                 # Entry point running the interactive user terminal
